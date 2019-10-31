@@ -1,0 +1,17 @@
+.item-img {
+    
+}
+
+.item-detail {
+    flex-grow: 1;
+    margin-left: 10px;
+}
+
+.item-actions {
+    align-self: center;
+}
+
+.item-logo {
+    height: 15vmin;
+    width: 15vmin;
+}
