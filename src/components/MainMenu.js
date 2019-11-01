@@ -1,7 +1,8 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 import { Navbar, Nav } from 'react-bootstrap';
 import logo from '../logo.svg';
+import '../App.css';
 
 const MainMenu = () => {
     const { pathname } = useLocation();
@@ -22,6 +23,17 @@ const MainMenu = () => {
           </Nav>
         </Navbar.Collapse>
       </Navbar>
+      // <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      //   <Link className="navbar-brand" to={'/'}>
+      //     <img src={logo} className="App-logo" alt="logo" />
+      //   </Link>
+      //   <ul className="navbar-nav mr-auto">
+      //     <li><Link to={'/'} className="nav-link">Home</Link></li>
+      //     <li><Link to={'/products'} className="nav-link">Products</Link></li>
+      //     <li><Link to={'/contact'} className="nav-link">Contact</Link></li>
+      //     <li><Link to={'/about'} className="nav-link">About</Link></li>
+      //   </ul>
+      // </nav>
     );
 };
 

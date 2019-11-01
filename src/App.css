@@ -20,3 +20,19 @@
 .App-link {
   color: #09d3ac;
 }
+
+.product-detail-area {
+  display: flex;
+  margin-top: 50px;
+}
+
+.product-detail-logo {
+  flex-grow: 1;
+  height: 50vmin;
+  width: 50vmin;
+}
+
+.product-detail-controls {
+  flex-grow: 2;
+  margin-left: 20px;
+}

@@ -3,36 +3,14 @@ import { ListGroup, Button } from 'react-bootstrap';
 import './List.css';
 import Item from './Item';
 
-export default class List extends React.Component {
-
-    list = [
-        {
-            id: 1,
-            name: 'Camry',
-            description: 'This is a Camry'
-        },
-        {
-            id: 2,
-            name: 'Ferrari',
-            description: 'This is a Ferrari'
-        },
-        {
-            id: 3,
-            name: 'Toyota',
-            description: 'This is a Toyota'
-        },
-        {
-            id: 4,
-            name: 'Ford',
-            description: 'This is a Ford'
-        },
-    ];
+class List extends React.Component {
 
     renderList() {
-        return this.list.map(item => {
+        const { list, onDelete } = this.props; 
+        return list.map(item => {
             return (
                     <ListGroup.Item key={item.id}>
-                        <Item car={item} />
+                        <Item product={item} onDelete={onDelete} />
                     </ListGroup.Item>
                 );
         });
@@ -49,3 +27,5 @@ export default class List extends React.Component {
         );
     }
 }
+
+export default List;
