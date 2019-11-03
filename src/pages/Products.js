@@ -2,7 +2,6 @@ import React from 'react';
 import { Switch, Route, useRouteMatch } from 'react-router-dom';
 import { List } from '../components';
 import ProductDetail from './ProductDetail';
-import ProductStore from '../stores/ProductStore';
 
 const Products = (props) => {
     const { path } = useRouteMatch();
@@ -12,7 +11,7 @@ const Products = (props) => {
                 <List {...props} />
             </Route>
             <Route path={`${path}/:id`}>
-                <ProductDetail />
+                <ProductDetail {...props} />
             </Route>
         </Switch>
     );

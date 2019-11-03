@@ -13,6 +13,18 @@ const Actions = {
             type: ActionTypes.DELETE_PRODUCT,
             id
         })
+    },
+    addToCart(data) {
+        AppDispatcher.dispatch({
+            type: ActionTypes.ADD_TO_CART,
+            data
+        });
+    },
+    deleteFromCart(id) {
+        AppDispatcher.dispatch({
+            type: ActionTypes.DELETE_FROM_CART,
+            id
+        });
     }
 };
 

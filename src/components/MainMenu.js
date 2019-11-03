@@ -1,13 +1,16 @@
 import React from 'react';
-import { useLocation, Link } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { Navbar, Nav } from 'react-bootstrap';
 import logo from '../logo.svg';
 import '../App.css';
+import CartStore from '../stores/CartStore';
 
 const MainMenu = () => {
     const { pathname } = useLocation();
+    const cart = CartStore.getState();
+    const badge = <span className="badge badge-danger">{cart.length}</span>;
     return (
-        <Navbar bg="dark" variant="dark">
+      <Navbar bg="dark" variant="dark" fixed="top">
         <Navbar.Brand href="#home">
           <img src={logo} className="App-logo" alt="logo" />
         </Navbar.Brand>
@@ -19,21 +22,13 @@ const MainMenu = () => {
             <Nav.Link href="/about">About</Nav.Link>
           </Nav>
           <Nav>
-            <Nav.Link href="/">Cart</Nav.Link>
+          <button type="button" className="btn btn-primary">
+            Cart {cart.length ? badge : ''}
+            <span className="sr-only">unread messages</span>
+          </button>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
-      // <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      //   <Link className="navbar-brand" to={'/'}>
-      //     <img src={logo} className="App-logo" alt="logo" />
-      //   </Link>
-      //   <ul className="navbar-nav mr-auto">
-      //     <li><Link to={'/'} className="nav-link">Home</Link></li>
-      //     <li><Link to={'/products'} className="nav-link">Products</Link></li>
-      //     <li><Link to={'/contact'} className="nav-link">Contact</Link></li>
-      //     <li><Link to={'/about'} className="nav-link">About</Link></li>
-      //   </ul>
-      // </nav>
     );
 };
 

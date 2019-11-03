@@ -1,9 +1,10 @@
 import React from 'react';
+import '../App.css';
 
 class Home extends React.Component {
 
     render() {
-        return <div>Welcome</div>;
+        return <div className="App-home">React Demo</div>;
     }
 
 }

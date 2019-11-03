@@ -21,15 +21,27 @@
   color: #09d3ac;
 }
 
+.App-home {
+  text-align: center;
+  padding-top: 100px;
+  font-size: 5em;
+}
+
+.App-container {
+  margin-top: 50px;
+}
+
 .product-detail-area {
   display: flex;
-  margin-top: 50px;
+  margin-top: 80px;
 }
 
 .product-detail-logo {
   flex-grow: 1;
-  height: 50vmin;
-  width: 50vmin;
+}
+
+.product-detail-logo > img {
+  max-height: 40vmin;
 }
 
 .product-detail-controls {

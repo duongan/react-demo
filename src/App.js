@@ -1,9 +1,10 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route, Link, useRouteMatch } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
-import { Home, Contact, Products, ProductDetail } from './pages';
+import { Home, Contact, Products } from './pages';
 import { MainMenu } from './components';
 import ProductStore from './stores/ProductStore';
+import CartStore from './stores/CartStore';
 import { Container } from 'flux/utils';
 import Actions from './stores/Actions';
 
@@ -11,8 +12,8 @@ function App(props) {
   return (
     <>
       <Router>
-        <div>
-          <MainMenu />    
+        <MainMenu />   
+        <div className="container App-container"> 
           <Switch>
             <Route path="/products">
               <Products {...props} />
@@ -37,7 +38,10 @@ function getStores() {
 function getState() {
     return {
         list: ProductStore.getState(),
-        onDelete: Actions.deleteProduct
+        cart: CartStore.getState(),
+        onDelete: Actions.deleteProduct,
+        onAddToCart: Actions.addToCart,
+        onDeleteFromCart: Actions.deleteFromCart
     };
 }
 

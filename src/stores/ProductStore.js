@@ -13,27 +13,37 @@ class ProductStore extends ReduceStore {
             {
                 "id": 1,
                 "name": "Camry",
-                "description": "This is a Camry"
+                "description": "This is a Camry. This is a Camry. This is a Camry. This is a Camry",
+                "price": "3,100,203,041 VND",
+                "image": "https://www.honda.com.vn/asserts/images/honda-car/list-car/list-car-city.jpg"
             },
             {
                 "id": 2,
                 "name": "Ferrari",
-                "description": "This is a Ferrari"
+                "description": "This is a Ferrari",
+                "price": "6,900,203,041 VND",
+                "image": "https://www.honda.com.vn/asserts/images/honda-car/list-car/list-car-jazz.jpg"
             },
             {
                 "id": 3,
                 "name": "Toyota",
-                "description": "This is a Toyota"
+                "description": "This is a Toyota",
+                "price": "1,500,203,041 VND",
+                "image": "https://www.honda.com.vn/asserts/images/honda-car/list-car/list-car-cr-v.jpg"
             },
             {
                 "id": 4,
                 "name": "Ford",
-                "description": "This is a Ford"
+                "description": "This is a Ford",
+                "price": "4,500,009,000 VND",
+                "image": "https://www.honda.com.vn/asserts/images/honda-car/list-car/list-car-hr-v.jpg"
             },
             {
                 "id": 5,
                 "name": "Honda",
-                "description": "This is a Honda"
+                "description": "This is a Honda",
+                "price": "1,220,000,000 VND",
+                "image": "https://www.honda.com.vn/asserts/images/honda-car/list-car/list-car-accord.png"
             }
         ];
     }
