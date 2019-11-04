@@ -12,23 +12,6 @@ const ProductDetail = (props) => {
                 <div className="product-detail-logo">
                     <img src={product.image} alt="logo"/>
                 </div>
-                {/* <div className="product-detail-controls">
-                    <div className="form-group row">
-                        <div className="input-group mb-3">
-                            <div className="input-group-prepend">
-                                <span className="input-group-text">Name</span>
-                            </div>
-                            <input type="text" readOnly className="form-control" placeholder="Product name" value={product.name} />
-                        </div>
-                    </div>
-                    <div className="form-group row">
-                        <label htmlFor="productDescription">Description</label>
-                        <textarea className="form-control"></textarea>
-                    </div>
-                    <div className="form-group row">
-                        <button type="button" className="btn btn-primary">Save</button>
-                    </div>
-                </div> */}
                 <div className="card" style={{width: "45rem"}}>
                     <div className="card-body">
                         <h5 className="card-title">{product.name}</h5>

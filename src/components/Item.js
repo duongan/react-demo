@@ -8,22 +8,6 @@ class Item extends React.Component {
         const { product } = this.props;
         const link = `/products/${product.id}`;
         return (
-            // <div className="list-item">
-            //     <div className="item-img">
-            //         <img src={logo} className="item-logo" alt="logo" />
-            //     </div>
-            //     <div className="item-detail">
-            //         <strong>{product.name}</strong>
-            //         <p>{product.description}</p>
-            //     </div>
-            //     <div className="item-actions">
-            //         <ButtonGroup size="sm">
-            //             <Button variant="outline-secondary">Add to Cart</Button>
-            //             <Button variant="outline-secondary" href={link}>View</Button>
-            //             <Button variant="outline-secondary" onClick={this.onDelete}>Remove</Button>
-            //         </ButtonGroup>
-            //     </div>
-            // </div>
             <div className="card">
                 <img src={product.image} className="card-img-top" alt="logo" />
                 <div className="card-body">
