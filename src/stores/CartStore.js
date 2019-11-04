@@ -16,7 +16,6 @@ class CartStore extends ReduceStore {
         switch(action.type) {
             case ActionTypes.ADD_TO_CART:
                 state.push(action.data);
-                console.log(state);
                 return state;
             case ActionTypes.DELETE_FROM_CART:
                 return state.filter(item => item.id !== action.id);

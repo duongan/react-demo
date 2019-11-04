@@ -1,7 +1,7 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import './App.css';
-import { Home, Contact, Products } from './pages';
+import { Home, Contact, Products, Cart } from './pages';
 import { MainMenu } from './components';
 import ProductStore from './stores/ProductStore';
 import CartStore from './stores/CartStore';
@@ -11,8 +11,7 @@ import Actions from './stores/Actions';
 function App(props) {
   return (
     <>
-      <Router>
-        <MainMenu />   
+        <MainMenu {...props} />   
         <div className="container App-container"> 
           <Switch>
             <Route path="/products">
@@ -21,18 +20,20 @@ function App(props) {
             <Route path="/contact">
               <Contact />
             </Route>
+            <Route path="/cart">
+              <Cart {...props} />
+            </Route>
             <Route path="/">
               <Home />
             </Route>
           </Switch>
         </div>
-      </Router>
     </>
   );
 }
 
 function getStores() {
-    return [ProductStore];
+    return [ProductStore, CartStore];
   }
 
 function getState() {

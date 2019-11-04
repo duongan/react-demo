@@ -8,7 +8,7 @@ const Products = (props) => {
     return (
         <Switch>
             <Route exact path={path}>
-                <List {...props} />
+                <List data={props.list} {...props} />
             </Route>
             <Route path={`${path}/:id`}>
                 <ProductDetail {...props} />

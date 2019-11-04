@@ -1,16 +1,16 @@
 import React from 'react';
-import { Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import './List.css';
 import Item from './Item';
 
 class List extends React.Component {
 
     renderList() {
-        const { list, onDelete } = this.props;
-        return list.map(item => {
+        const { data, onDelete, onAddToCart } = this.props;
+        return data.map(item => {
             return (
                     <div className="col-sm-4" style={{marginTop: "30px"}} key={item.id}>
-                        <Item product={item} onDelete={onDelete} />
+                        <Item product={item} onDelete={onDelete} onAddToCart={onAddToCart}/>
                     </div>
                 );
         });
@@ -19,7 +19,7 @@ class List extends React.Component {
     render() {
         return (
             <>
-                <Button style={ {marginTop: "20px"} } variant="primary">Add Car</Button>
+                {/* <Link className="btn btn-primary" style={ {marginTop: "20px"} } to={'/products/new'}>Add Item</Link> */}
                 <div className="row">
                     {this.renderList()}
                 </div>

@@ -12,36 +12,43 @@ class ProductStore extends ReduceStore {
         return [
             {
                 "id": 1,
-                "name": "Camry",
-                "description": "This is a Camry. This is a Camry. This is a Camry. This is a Camry",
+                "name": "Item 1",
+                "description": "This is a Item 1",
                 "price": "3,100,203,041 VND",
                 "image": "https://www.honda.com.vn/asserts/images/honda-car/list-car/list-car-city.jpg"
             },
             {
                 "id": 2,
-                "name": "Ferrari",
-                "description": "This is a Ferrari",
+                "name": "Item 2",
+                "description": "This is a Item 2",
                 "price": "6,900,203,041 VND",
                 "image": "https://www.honda.com.vn/asserts/images/honda-car/list-car/list-car-jazz.jpg"
             },
             {
                 "id": 3,
-                "name": "Toyota",
-                "description": "This is a Toyota",
+                "name": "Item 3",
+                "description": "This is a Item 3",
                 "price": "1,500,203,041 VND",
                 "image": "https://www.honda.com.vn/asserts/images/honda-car/list-car/list-car-cr-v.jpg"
             },
             {
                 "id": 4,
-                "name": "Ford",
-                "description": "This is a Ford",
+                "name": "Item 4",
+                "description": "This is a Item 4",
                 "price": "4,500,009,000 VND",
                 "image": "https://www.honda.com.vn/asserts/images/honda-car/list-car/list-car-hr-v.jpg"
             },
             {
                 "id": 5,
-                "name": "Honda",
-                "description": "This is a Honda",
+                "name": "Item 5",
+                "description": "This is a Item 5",
+                "price": "1,220,000,000 VND",
+                "image": "https://www.honda.com.vn/asserts/images/honda-car/list-car/list-car-accord.png"
+            },
+            {
+                "id": 6,
+                "name": "Item 6",
+                "description": "This is a Item 5",
                 "price": "1,220,000,000 VND",
                 "image": "https://www.honda.com.vn/asserts/images/honda-car/list-car/list-car-accord.png"
             }

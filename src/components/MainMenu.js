@@ -5,10 +5,9 @@ import logo from '../logo.svg';
 import '../App.css';
 import CartStore from '../stores/CartStore';
 
-const MainMenu = () => {
+const MainMenu = (props) => {
     const { pathname } = useLocation();
     const cart = CartStore.getState();
-    const badge = <span className="badge badge-danger">{cart.length}</span>;
     return (
       <Navbar bg="dark" variant="dark" fixed="top">
         <Navbar.Brand href="#home">
@@ -19,13 +18,12 @@ const MainMenu = () => {
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/products">Products</Nav.Link>
             <Nav.Link href="/contact">Contact</Nav.Link>
-            <Nav.Link href="/about">About</Nav.Link>
           </Nav>
           <Nav>
-          <button type="button" className="btn btn-primary">
-            Cart {cart.length ? badge : ''}
+          <a className="btn btn-primary" href={'/cart'}>
+            Cart <span className="badge badge-danger">{cart.length}</span>
             <span className="sr-only">unread messages</span>
-          </button>
+          </a>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
